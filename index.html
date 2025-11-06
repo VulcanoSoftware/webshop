@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module">
+        import {WebShop} from './js/webshop.js';
+        const app = new WebShop();
+        window.addEventListener('load', () => {
+            app.init();
+        });
+        
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h1 id="title">Liam's webshop</h1>
+    <div id="winkel">
+        <div id="productContainer"></div>
+        <div id="basketPlaceholderDialog">
+            <div id="basketPlaceholder"></div>
+        </div>
+        <dialog id="checkoutModal">
+        </dialog>
+        <dialog id="productModal">
+        </dialog>
+    </div>
+</body>
+</html>
