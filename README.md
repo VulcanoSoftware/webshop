@@ -4,4 +4,4 @@
 - Een favorieten lijstje waarop je producten kunt toevoegen en opslaan
 - Implementeer localstorage voor communicatie naar apparte pagina's (indien mogelijk)
 
-  **Veel success ;)**
+**Veel success ;)**
