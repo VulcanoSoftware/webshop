@@ -1,180 +1,204 @@
+/* --------------------------------------------------------------
+   ALGEMENE PAGINA STYLING
+-------------------------------------------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #0e0e0e;
+    color: #f5f5f5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    color: #00c9ff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* --------------------------------------------------------------
+   HEADER / NAVIGATIE
+-------------------------------------------------------------- */
 #title {
     text-align: center;
     font-size: 40px;
     margin-top: 20px;
     font-family: 'Segoe UI', sans-serif;
+    color: #00c9ff;
+    text-shadow: 0 0 8px #00c9ff;
 }
 
 .topnav {
     position: relative;
+    background-color: #111;
+    padding: 15px 0;
+    text-align: center;
 }
 
 .topnav a {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    color: black;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+    top: 10px;
+    left: 10px;
+    color: #b270f5;
+    padding: 12px 16px;
+    border-radius: 8px;
     font-size: 17px;
     font-family: 'Segoe UI', sans-serif;
+    transition: 0.3s;
 }
 
 .topnav a.active {
-    background-color: rgb(187, 187, 187);
-    color: white;
+    background-color: #3d3d3d;
+    color: #fff;
 }
 
 .topnav a:hover {
-    background-color: grey;
-    color: white;
+    background-color: #5b2eff;
+    color: #fff;
 }
 
+/* HOME NAV / CONTACT NAV */
+.homenav,
+.contactnav {
+    background-color: #141414;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #222;
+}
+
+.homenav a,
+.contactnav a {
+    color: #b270f5;
+    font-size: 16px;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.homenav a:hover,
+.contactnav a:hover {
+    background-color: #7b3dff;
+    color: #000;
+    box-shadow: 0 0 10px #b270f5;
+}
+
+/* --------------------------------------------------------------
+   CONTACT FORM
+-------------------------------------------------------------- */
 div.contactformulier {
     width: 500px;
-    border-radius: 10px;
-    border: 2px solid #ccc;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    margin: auto;
+    max-width: 90%;
+    margin: 50px auto;
+    padding: 25px;
+    border-radius: 15px;
+    border: 2px solid #3d3d3d;
+    background-color: #171717;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
 label {
     font-family: 'Segoe UI', sans-serif;
     margin-left: 12px;
-    margin-top: 3px;
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+    color: #b270f5;
 }
 
 #vraag {
-    width: 463px;
-    height: 50px;
+    width: 100%;
+    height: 60px;
     margin-left: 12px;
-    margin-bottom: 12px;
     margin-top: 5px;
+    margin-bottom: 12px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #3d3d3d;
+    background-color: #222;
+    color: #f5f5f5;
 }
 
 input {
+    width: calc(100% - 24px);
     margin-top: 15px;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #3d3d3d;
+    background-color: #222;
+    color: #f5f5f5;
+    font-family: 'Segoe UI', sans-serif;
 }
+
 
 #winkel {
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 20px;
 }
 
 #productContainer {
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .product {
-    border: 5px solid #ccc;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
+    background-color: #171717;
+    border: 3px solid #3d3d3d;
+    border-radius: 15px;
+    padding: 15px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 14px;
+    text-align: center;
+    transition: 0.3s;
+    width: 200px;
 }
 
 .product:hover {
-    border-color: #777;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    border-color: #00c9ff;
+    box-shadow: 0 4px 12px rgba(0, 201, 255, 0.5);
     cursor: pointer;
 }
 
+#productContainer img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.product h3 {
+    color: #00c9ff;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+
 .basket {
-    border: 5px dashed black;
+    position: relative;
+    border: 3px dashed #00c97d;
     margin: 20px;
     padding: 20px;
     font-family: 'Segoe UI', sans-serif;
     font-size: 16px;
-    border-radius: 10px;
+    border-radius: 15px;
+    background-color: #171717;
 }
 
 .basket-item {
-    border: 2px solid black;
-    padding: 10px;
+    border: 2px solid #00c97d;
+    padding: 12px;
     margin-bottom: 10px;
     border-radius: 10px;
-}
-
-#productModal img {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-#productModal {
-    width: 80%;
-    max-width: 800px;
-    padding: 20px;
-    height: 90%;
-    text-align: center;
-    border-radius: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 14px;
-}
-
-#checkoutModal {
-    width: 80%;
-    max-width: 800px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 30px;
-    font-family: 'Segoe UI', sans-serif;
-    font-size: 14px;
-}
-
-#checkoutModal button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    margin-top: 10px;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-#checkoutModal button:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
-#paymentMethod {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    width: 50%;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-#paymentMethod:hover {
-    transform: scale(0.95);
-    transition: 0.3s;
-}
-
-#paymentAmount {
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 10px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-    width: 50%;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-#paymentAmount:hover {
-    transform: scale(0.95);
-    transition: 0.3s;
+    background-color: #1c1c1c;
 }
 
 .basketAdd {
@@ -190,63 +214,6 @@ input {
     padding: 5px 10px;
     cursor: pointer;
     border-radius: 10px;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-.basketAdd:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
-.addToBasketButton {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-.addToBasketButton:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
-.closeModalButton {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 10px;
-    transform: scale(1);
-    transition: 0.3s;
-}
-
-.closeModalButton:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
-.topRightCloseModalButton {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f44336;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 50%;
     transform: scale(1);
     transition: 0.3s;
 }
@@ -269,11 +236,6 @@ input {
     transition: 0.3s;
 }
 
-.removeBasket:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: 0.3s;
-}
 
 .plusBasket {
     background-color: rgb(0, 187, 0);
@@ -290,12 +252,6 @@ input {
     font-size: 16px;
     border-radius: 10px;
     transform: scale(1);
-    transition: 0.3s;
-}
-
-.plusBasket:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
     transition: 0.3s;
 }
 
@@ -317,12 +273,6 @@ input {
     transition: 0.3s;
 }
 
-.minBasket:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
-    transition: 0.3s;
-}
-
 .checkoutButton {
     background-color: #4CAF50;
     background-image: url(../icons/shopping-cart.png);
@@ -341,8 +291,142 @@ input {
     transition: 0.3s;
 }
 
-.checkoutButton:hover {
-    opacity: 0.7;
-    transform: scale(0.9);
+/* Product / basket knoppen */
+.addToBasketButton,
+.basketAdd,
+.checkoutButton {
+    background-color: #00c97d;
+    color: #000;
+}
+
+.removeBasket,
+.minBasket {
+    background-color: #ff3131;
+    color: #fff;
+}
+
+.plusBasket {
+    background-color: #00ff7f;
+    color: #000;
+}
+
+/* Hover effecten voor product/basket knoppen */
+.addToBasketButton:hover,
+.basketAdd:hover,
+.checkoutButton:hover,
+.removeBasket:hover,
+.plusBasket:hover,
+.minBasket:hover {
+    transform: scale(0.92);
+    opacity: 0.8;
+}
+
+/* Payment buttons */
+.confirmPaymentButton,
+.closeCheckoutButton {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    width: 100%;
+    padding: 12px 20px;
+    font-weight: bold;
+}
+
+.confirmPaymentButton:hover,
+.closeCheckoutButton:hover {
+    transform: scale(0.97);
+    opacity: 0.9;
+    border-color: #00c97d;
+}
+
+/* Basket / modal sluitknoppen */
+.closeModalButton,
+.topRightCloseModalButton,
+.basketCloseButton {
+    background-color: #ff3131;
+    color: #fff;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    font-size: 18px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.closeModalButton:hover,
+.topRightCloseModalButton:hover,
+.basketCloseButton:hover {
+    transform: scale(1.1);
+    opacity: 0.9;
+    box-shadow: 0 0 15px #ff3131;
+}
+
+
+#productModal,
+#checkoutModal {
+    background-color: #1c1c1c;
+    width: 80%;
+    max-width: 800px;
+    padding: 25px;
+    border-radius: 25px;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #f5f5f5;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.7);
+}
+
+#productModal img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 10px;
+}
+
+/* Payment inputs */
+#paymentMethod,
+#paymentAmount {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 10px;
+    border: 1px solid #3d3d3d;
+    margin-top: 10px;
+    background-color: #222;
+    color: #f5f5f5;
     transition: 0.3s;
+}
+
+#paymentMethod:hover,
+#paymentAmount:hover {
+    transform: scale(0.97);
+    border-color: #00c97d;
+}
+
+
+@media (max-width: 900px) {
+    #winkel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .basket {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    #title {
+        font-size: 28px;
+    }
+
+    .topnav a {
+        font-size: 14px;
+    }
+
+    .product img {
+        height: 120px;
+    }
 }
