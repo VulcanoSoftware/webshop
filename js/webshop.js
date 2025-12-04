@@ -23,6 +23,12 @@ export class WebShop {
         this.getProducts();
         this.renderProducts();
 
+    
+        this.basket.items = this.basket.items.map(item => {
+            item.prod = this.products[item.prod.id];
+            return item;
+        });
+
         this.renderBasket();
 
         this.addEvents();
