@@ -2,6 +2,21 @@ export class Basket {
 
     items = [];
 
+    constructor() {
+        this.load();
+    }
+
+    save() {
+        localStorage.setItem("basket", JSON.stringify(this.items));
+    }
+
+    load() {
+        const data = localStorage.getItem("basket");
+        if (data) {
+            this.items = JSON.parse(data);
+        }
+    }
+
     addItem(obj, quantity) {
         if (this.items.find(item => item.prod == obj)) {
             let index = this.items.findIndex(item => item.prod == obj);
